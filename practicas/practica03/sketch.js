@@ -3,10 +3,11 @@ function setup() {
   createCanvas(800, 400);
   noStroke();
   
-  var gris = color(188, 188, 188);
+  var gris = color(188);
   var rosa = color(187, 62, 141);
   var amarillo = color(244, 252, 99);
   var azul = color(71, 227, 255);
+  var azulTransparente = color(71, 227, 255, 150);
 
   background(gris);
   
@@ -27,7 +28,7 @@ function setup() {
   rect(450, 50, 300, 300);
   
   // cuadrado mediano der
-  fill(azul);
+  fill(azulTransparente);
   rect(500, 100, 200, 200);
   
   // cuadrado pequeño der
