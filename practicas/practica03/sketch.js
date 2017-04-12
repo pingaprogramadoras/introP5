@@ -1,26 +1,36 @@
-// Variables y tipos de datos
+// Usando variables para asignar colores
+function setup() {
+  createCanvas(800, 400);
+  noStroke();
+  
+  var gris = color(188, 188, 188);
+  var rosa = color(187, 62, 141);
+  var amarillo = color(244, 252, 99);
+  var azul = color(71, 227, 255);
 
-// Javascript es case-sensitive: distingue entre minúsculas y mayúsculas
-// Se usa el estilo Camelcase para nombrar a las variables
-
-// Variable global declarada fuera de una función. La podemos usar
-// en cualquier sitio
-// Statements - sentencias, acaban con punto y coma
-var miEdad = 40;
-
-// Distinguir dos pasos: declarar y asignar valor
-// palabra clave var para declarar una variable
-var miNombre;
-// Asignar un valor a una variable con el signo igual
-miNombre = 'Esperanza';
-
-// Las variables en Javascript son mutables. Se declaran una sola vez pero se les puede
-// reasignar un valor varias veces.
-miEdad = 25;
-
-function setup () {
-  print('Me llamo ' + miNombre + ' y mi edad es ' + miEdad + ' años');
-  print(typeof(miEdad))
-  print(typeof(miNombre))
+  background(gris);
+  
+  // cuadrado grande izq
+  fill(rosa);
+  rect(50, 50, 300, 300);
+  
+  // cuadrado mediano izq
+  fill(amarillo);
+  rect(100, 100, 200, 200);
+  
+  // cuadrado pequeño izq
+  fill(azul);
+  rect(150, 150, 100, 100);
+  
+  // cuadrado grande der
+  fill(amarillo);
+  rect(450, 50, 300, 300);
+  
+  // cuadrado mediano der
+  fill(azul);
+  rect(500, 100, 200, 200);
+  
+  // cuadrado pequeño der
+  fill(rosa);
+  rect(550, 150, 100, 100);
 }
-
