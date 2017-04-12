@@ -9,7 +9,7 @@
 // console.log('imprimiendo miEdad antes de declararla' + miEdad)
 var miEdad = 40;
 
-// Distinguir dos pasos: declarar y asignar valor
+// Distinguir dos pasos: declarar e inicializar (asignar valor)
 // palabra clave var para declarar una variable
 var miNombre;
 // Asignar un valor a una variable con el signo igual
