@@ -1,19 +1,20 @@
 var ladoRect = 100;
-var mitadLadoRect = 100 / 2;
+var mitadLado = ladoRect / 2;
 var rectX;
 var rectY;
 
 function setup() {
   createCanvas(400, 400);
-  rectX = width / 2 - mitadLadoRect;
-  rectY = height / 2 - mitadLadoRect;
+  rectMode(CENTER);
+  rectX = width / 2;
+  rectY = height / 2;
 }
 
 function draw() {
   background(0);
   
   
-  if (mouseX > rectX && mouseX < (rectX + ladoRect) && mouseY > rectY && mouseY < (rectY + ladoRect)) {
+  if (mouseX > rectX - mitadLado && mouseX < rectX + mitadLado && mouseY > rectY - mitadLado && mouseY < rectY + mitadLado) {
     fill(255, 0, 255);
     noStroke();
   } else {
