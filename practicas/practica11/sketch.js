@@ -3,6 +3,7 @@ var mitadLado = ladoRect / 2;
 var rectX;
 var rectY;
 var bgColor = 0;
+// var bgIsBlack = true;
 
 function setup() {
   createCanvas(400, 400);
@@ -22,10 +23,20 @@ function draw() {
     } else {
       bgColor = 0;
     }
+    // bgIsBlack = false;
   } else {
     noFill();
     stroke(255);
+    // bgIsBlack = true;
   }
+  
+  
+  // if (bgIsBlack === true) {
+/*  if (bgIsBlack) {
+    bgColor = 0;
+  } else {
+    bgColor = 255;
+  }*/
   
   rect(rectX, rectY, ladoRect, ladoRect);
 }
