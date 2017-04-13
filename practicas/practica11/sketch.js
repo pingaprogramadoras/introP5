@@ -3,7 +3,7 @@ var mitadLado = ladoRect / 2;
 var rectX;
 var rectY;
 var bgColor = 0;
-// var bgIsBlack = true;
+var bgIsBlack = true;
 
 function setup() {
   createCanvas(400, 400);
@@ -18,25 +18,19 @@ function draw() {
   if (mouseX > rectX - mitadLado && mouseX < rectX + mitadLado && mouseY > rectY - mitadLado && mouseY < rectY + mitadLado) {
     fill(255, 0, 255);
     noStroke();
-    if (mouseIsPressed) {
-      bgColor = 255;
-    } else {
-      bgColor = 0;
-    }
-    // bgIsBlack = false;
+    bgIsBlack = false;
   } else {
     noFill();
     stroke(255);
-    // bgIsBlack = true;
+    bgIsBlack = true;
   }
   
-  
   // if (bgIsBlack === true) {
-/*  if (bgIsBlack) {
+  if (bgIsBlack) {
     bgColor = 0;
   } else {
     bgColor = 255;
-  }*/
+  }
   
   rect(rectX, rectY, ladoRect, ladoRect);
 }
