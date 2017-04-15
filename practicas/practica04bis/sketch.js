@@ -11,3 +11,7 @@ function draw() {
   stroke(mouseX, 100, 100);
   line(0, mouseY, 400, mouseY);
 }
+
+function mousePressed () {
+  saveCanvas('myCanvas', 'jpg');
+}
