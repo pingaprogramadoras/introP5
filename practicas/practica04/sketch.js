@@ -19,3 +19,7 @@ function draw() {
   strokeWeight(5);
   ellipse(mouseX, mouseY, mouseX / 2, mouseX / 2);
 }
+
+function mousePressed () {
+  saveCanvas('myCanvas', 'jpg');
+}
