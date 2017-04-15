@@ -1,27 +1,33 @@
-var ondaCoseno = [];
+var circulosY = [];
 
-function setup() {
-  createCanvas(720, 360);
+var setup = function() {
+  createCanvas(400, 400);
+  noStroke();
+  colorMode(HSB);
 
-  // Añadimos valores al array ondaCoseno
-  for (var i = 0; i < width; i++) {
-    var amount = map(i, 0, width, 0, PI);
-    ondaCoseno[i] = abs(cos(amount));
+  for (var i = 0; i < 100; i++) {
+    circulosY[i] = random(0, width);
   }
+}
 
-  background(255);
-  
-  var y1 = 0;
-  var y2 = height/2;
-  for (var i = 0; i < width; i +=1) {
-    stroke(ondaCoseno[i] * 255, 0, 0);
-    line(i, y1, i, y2);
-  }
-  
-  y1 = y2;
-  y2 = height;
-  for (var i = 0; i < width; i+=1) {
-    stroke(255 - ondaCoseno[i]*255, 0, 0);
-    line(i, y1, i, y2);
+var draw = function() {
+  background(50);
+
+  for (var i = 0; i < 100; i++) {
+     var h = map(circulosY[i], 0, width, 0, 360);
+    //var h = map(i, 0, 100, 0, 360);
+    fill(h, 100, 100);
+    strokeWeight(1.5);
+    var x = map(i, 0, 100, 0, width);
+    ellipse(x, circulosY[i], 15, 15);
+    var x1 = map(i+1, 0, 100, 0, width);
+    
+    stroke(h, 100, 100);
+    line(x, circulosY[i], x1, circulosY[i + 1]);
+
+    circulosY[i]++;
+    if (circulosY[i] > width) {
+      circulosY[i] = 0;
+    }
   }
 }
