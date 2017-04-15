@@ -1,32 +1,26 @@
-/*
-var r = 0;
-var g = 255;
-var b = 255;
-var x = 200;
-var y = 200;
-var d = 100;
-*/
-
-// Sintaxis: Javascript Object Notation JSON
-var miColor = {
-  r: 0,
-  g: 255,
-  b: 255
-}
-var circle = {
-  x: 200,
-  y: 200,
-  d: 100
-}
+var x = 0;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 200);
+  colorMode(HSB);
+  background(255);
 }
 
 function draw() {
-  background(0);
-  
-  // dot syntax para acceder a las propiedades
-  fill(miColor.r, miColor.g, miColor.b);
-  ellipse(circle.x, circle.y, circle.d, circle.d);
+  var H = random(0, 360);
+  var S = random(60, 100);
+  var B = random(60, 100);
+  var a = 0.5;
+  var miColor = [H, S, B, a];
+  stroke(miColor);
+  strokeWeight(10);
+  line(x, 0, x + random(-50, 50), height);
+  x = x + 5;
+  if (x > width) {
+    x = 0;
+  }
+}
+
+function mousePressed () {
+  saveCanvas('myCanvas', 'jpg');
 }
