@@ -15,16 +15,16 @@ function setup() {
   rect(100, 200, 150, 150);
 
   // Tejado
-  // triangle(X1, Y1, X2, Y2, X3, Y3) 
+  // triangle(X1, Y1, X2, Y2, X3, Y3)
   triangle(100, 200, 250, 200, 175, 100);
-  
+
   // Puerta
   rect(150, 250, 50, 100);
- 
+
   // Luna
   ellipse(300, 125, 50, 50);
 
-  
+
   // Para imprimir en la consola de la IDE
   print('hola, esta es mi casa');
 }
