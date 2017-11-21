@@ -12,10 +12,6 @@ function draw() {
   azul = color(100, 250, 250);
   stroke(azul);
   strokeWeight(grosor);
-  line(mouseX, mouseY, pmouseX, pmouseY);
-  noStroke();
-  fill(azul);
-  ellipse(mouseX, mouseY, grosor, grosor);
 }
 
 function mousePressed () {
