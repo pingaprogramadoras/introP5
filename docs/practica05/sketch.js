@@ -18,16 +18,15 @@ function draw() {
   ellipse(mouseX, mouseY, grosor, grosor);
 }
 
-/*function mousePressed () {
+function mousePressed () {
   background(250, 250, 150);
-}*/
+}
 
-/*function mouseDragged () {
+function mouseDragged () {
   stroke(azul);
   strokeWeight(grosor);
   line(mouseX, mouseY, pmouseX, pmouseY);
   noStroke();
   fill(azul);
   ellipse(mouseX, mouseY, grosor, grosor);
-}*/
-
+}
